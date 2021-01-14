@@ -15,7 +15,7 @@ provider "aws" {
 
 # Configurando o tipo da instancia
 resource "aws_instance" "dps-01" {
-    ami = "ami-0229f7666f517b31e"
+    ami = var.amis[var.region]
     instance_type = "t2.micro"
 }
 
